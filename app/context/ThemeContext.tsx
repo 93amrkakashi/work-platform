@@ -1,5 +1,6 @@
 "use client";
-import { createContext, useContext, ReactNode, FC, useState } from "react";
+
+import { createContext, useContext, ReactNode, FC, useState, useEffect } from "react";
 
 interface ThemeContextProps {
   theme: string;
@@ -21,13 +22,24 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
-  const initialTheme = localStorage.getItem("theme") || "dark";
-  const [theme, setTheme] = useState(initialTheme);
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    // Check if localStorage is available (client side)
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
+  }, []);
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-    localStorage.setItem("theme", theme === "light" ? "dark" : "light");
   };
+
+  useEffect(() => {
+    // Update localStorage with the new theme
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const contextValue: ThemeContextProps = {
     theme,
