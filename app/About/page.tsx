@@ -44,35 +44,30 @@ const About = () => {
 
           <div className="flex items-center justify-around my-12">
             <p className="text-lg mb-4">
-          الابتكار والتكنولوجيا هما جوهر عملنا. نظل دائمًا في الصدارة، باعتماد
-          أحدث التقنيات لتقديم حلول متقدمة تتجاوز توقعات عملائنا.
-        </p>
+              الابتكار والتكنولوجيا هما جوهر عملنا. نظل دائمًا في الصدارة،
+              باعتماد أحدث التقنيات لتقديم حلول متقدمة تتجاوز توقعات عملائنا.
+            </p>
             <Image className="mx-10" src={pic3} alt="logo" width={410} />
           </div>
 
           <div className="flex items-center justify-around my-12">
             <Image className="mx-10" src={pic4} alt="logo" width={410} />
-          <p className="text-lg mb-4">
-          رؤيتنا في <span className="co-name">Scripto Code</span> هي أن نكون
-          الرائدين في مجال تطوير البرمجيات، حيث نسعى باستمرار لتحقيق رضا العملاء
-          وتلبية توقعاتهم من خلال الجودة والابتكار.
-        </p>
+            <p className="text-lg mb-4">
+              رؤيتنا في <span className="co-name">Scripto Code</span> هي أن نكون
+              الرائدين في مجال تطوير البرمجيات، حيث نسعى باستمرار لتحقيق رضا
+              العملاء وتلبية توقعاتهم من خلال الجودة والابتكار.
+            </p>
           </div>
 
           <div className="flex items-center justify-around my-12">
-          <p className="text-lg mb-4">
-          الجودة ورضا العملاء هما قيم أساسية في{" "}
-          <span className="co-name">Scripto Code</span>. نهدف إلى أن نكون شريكًا
-          موثوقًا للعملاء الذين يبحثون عن حلول برمجية مبتكرة وفعالة.
-        </p>
+            <p className="text-lg mb-4">
+              الجودة ورضا العملاء هما قيم أساسية في{" "}
+              <span className="co-name">Scripto Code</span>. نهدف إلى أن نكون
+              شريكًا موثوقًا للعملاء الذين يبحثون عن حلول برمجية مبتكرة وفعالة.
+            </p>
             <Image className="mx-10" src={pic5} alt="logo" width={410} />
           </div>
-
         </div>
-
-        
-        
-        
       </div>
     </main>
   );
