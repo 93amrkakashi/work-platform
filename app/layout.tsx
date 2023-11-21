@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import "./globals.css";
+import { Cairo } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+// components
+import Navbar from "./components/Navbar";
+import { ThemeProvider } from "./context/ThemeContext";
+
+const rubik = Cairo({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <ThemeProvider>
+          <Navbar />
+        <body dir="rtl" className={rubik.className}>
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   )
 }
