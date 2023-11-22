@@ -7,7 +7,7 @@ const {
   updateproject,
   deleteproject
   
- } = require("../controllers/projectController");
+ } = require("../controllers/ProjectController");
 
  
 // get all projects
