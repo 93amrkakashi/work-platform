@@ -38,3 +38,4 @@ mongoose
     console.log(err);
     console.log("Not connected to DB");
   });
+  module.exports = app;
