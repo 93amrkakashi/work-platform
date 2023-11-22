@@ -49,7 +49,7 @@ const Services = () => {
         </div>
 
         <div
-          className={`relative flex flex-col md:flex-row  justify-evenly items-center px-3  my-6 min-h-[60vh]  w-full `}
+          className={`relative flex flex-col-reverse md:flex-row  justify-evenly items-center px-3  my-6 min-h-[60vh]  w-full `}
         >
           <div className="ser">
             <p className="font-bold text-2xl text-gray-900 p-0 px-10 pb-12 m-0 text-center">

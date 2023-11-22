@@ -54,9 +54,7 @@ function Navbar() {
             <li>
               <Link onClick={handleLinkClick} href="/Services">الخدمات</Link>
             </li>
-            <li>
-              <Link onClick={handleLinkClick} href="/Team">الفريــق</Link>
-            </li>
+            
             <li>
               <div className="cl-toggle-switch">
                 <label className="cl-switch">
