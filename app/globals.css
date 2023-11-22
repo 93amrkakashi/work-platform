@@ -6,7 +6,7 @@
 
 
 body {
-  background: #ebf0fa;
+  /* background: #ebf0fa; */
   @apply text-gray-500 m-8;
   margin: 0
 }
@@ -14,9 +14,9 @@ h1, h2 {
   @apply font-bold text-primary text-lg;
 }
 main {
-  @apply max-w-5xl  mx-auto px-8;
+  @apply w-full  mx-auto ;
   min-height: calc(110vh - 55px);
-  padding-top: 65px;
+  padding-top: 50px;
 }
 main > h2 {
   @apply mb-4 pb-2 text-base ;
@@ -25,16 +25,19 @@ p > a {
   @apply text-primary underline;
 }
 
+.hero{
+  background-image: url("./About/shadow.webp");
+}
 
-
-
+/* background-image: linear-gradient(20deg,#2cccc4,#f6f6c9); */
 .dark-nav{
-  background-color: #121212;
+  @apply bg-slate-900;
   color: #e6e6e6;
   transition: all 0.9s ease;
 }
 .light-nav{
-  background-color: #6443eb;
+  /* background-color: #6443eb; */
+  @apply bg-indigo-700;
   color: #ede2fc;
   transition: all 0.9s ease;
 }
@@ -321,4 +324,19 @@ button:hover {
 
 .co-name{
   color: #6443eb;
+}
+
+.activity {
+  transition: all 0.9s ease;
+  background: linear-gradient(30deg,#6443eb,#9a94e3);
+  color: white;
+}
+
+
+.activity:hover{
+  transition: all 0.9s ease;
+  color: #6443eb;
+  background:white ;
+  border: 1px solid black;
+  transform: translateY(-10px);
 }
