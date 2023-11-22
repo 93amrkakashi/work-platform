@@ -1,0 +1,15 @@
+http://localhost:5000/api/projects/       get all       get
+http://localhost:5000/api/projects/:id    get one       get
+http://localhost:5000/api/projects/:id    update one    patch
+http://localhost:5000/api/projects/:id    delete one    delete
+http://localhost:5000/api/projects/       add one       post
+
+
+
+
+http://localhost:5000/api/user/login      login       post
+http://localhost:5000/api/user/signup     sign up     post
+http://localhost:5000/api/user/users      get all     get
+http://localhost:5000/api/user/users/:id  get one     get
+
+
