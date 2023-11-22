@@ -41,34 +41,29 @@ export default function Home() {
         </div>
         {/* ********************* */}
         <div
+          dir="rtl"
           className={` flex justify-center items-center min-h-[40vh]  w-full`}
         >
           <div className="flex flex-col justify-center items-center  pb-6">
             <h1 className="text-slate-900 font-bold text-5xl pb-6 ps-10">
-              About{" "}
+              عن{" "}
               <span className="co-name font-bold text-5xl">Scripto Code</span>
             </h1>
             <p className="font-bold text-2xl text-gray-600 p-0 px-10 m-0 text-center">
-              We are an Egyptian software company specialized in providing
-              information technology solutions.
-            </p>
-            <p className="font-bold text-2xl text-gray-600 p-0 px-10 m-0 text-center">
-              {" "}
-              Our team is proud of being made up of distinguished Egyptians in
-              the field of programming and software development, and we strive
-              to provide high quality services to our customers.
+              نحن شركة برمجيات مصرية متخصصة في تقديم حلول تكنولوجيا المعلومات.
+              يفخر فريقنا بأنه مكون من مصريين متميزين في مجال البرمجة وتطوير
+              البرمجيات، ونسعى جاهدين لتقديم خدمات عالية الجودة لعملائنا.
             </p>
           </div>
         </div>
         {/* ********************* */}
-        <div
+        <div dir="rtl"
           className={` flex justify-center items-center min-h-[40vh]  w-full`}
         >
           <div className="flex flex-col justify-center items-center  pb-6">
             <p className="font-bold text-2xl text-gray-600 p-0 px-10 pb-12 m-0 text-center">
-              We assist you in digital transformation across various activities
-              and fields, providing software solutions that enhance work
-              efficiency in ....
+              
+              نقدم لك مجموعه من التطبيقات والحلول البرمجية التى تساعد فى ادارة العديد من الاعمال والانشطة مثل  ....
             </p>
             <Fields />
           </div>

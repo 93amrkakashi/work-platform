@@ -49,7 +49,7 @@ function Navbar() {
             className={`links flex flex-col items-center justify-evenly h-full font-medium mt-4 rounded-lg md:space-x-8 md:items-center md:h-[54px] md:flex-row md:mt-0 md:border-0 `}
           >
             <li>
-              <Link onClick={handleLinkClick} href="/About">عـن الشركـة</Link>
+              <Link onClick={handleLinkClick} href="/">عـن الشركـة</Link>
             </li>
             <li>
               <Link onClick={handleLinkClick} href="/Services">الخدمات</Link>
