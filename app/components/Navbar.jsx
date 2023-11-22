@@ -33,7 +33,7 @@ function Navbar() {
           />
         </Link>
         
-          <label  className="buttons__burger md:hidden" >
+          <label  className="buttons__burger md:hidden" for="burger">
             <input onClick={handleToggleMenu} type="checkbox" id="burger" />
             <span></span>
             <span></span>
