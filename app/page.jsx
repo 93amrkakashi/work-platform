@@ -17,15 +17,15 @@ export default function Home() {
             theme === "dark" ? "bg-slate-900" : "bg-indigo-700"
           }`}
         >
-          <div className="flex flex-col justify-center gap-5 items-start px-3 pb-12">
-            <h1 className="font-bold text-6xl text-gray-50">
+          <div className="flex flex-col justify-center gap-5 items-center md:items-start px-3 pb-12">
+            <h1 className="font-bold text-3xl md:text-6xl text-gray-50">
               Scripto Code
             </h1>
-            <h1 className="font-bold text-3xl text-gray-50">
+            <h1 className="font-bold text-xl md:text-3xl text-gray-50">
               A Software Company
             </h1>
-            <p className="font-bold text-2xl text-gray-100 ">
-              Your Programming Solutions Partner
+            <p className="font-bold text-xl md:text-2xl text-gray-100 ">
+              Your Programming Partner
             </p>
           </div>
           <div className="">
