@@ -52,10 +52,10 @@ const Fields = () => {
       </div>
       {/* ******************** */}
       
-      <div className="card flex flex-col justify-center items-center gap-4 text-5xl border-2 rounded shadow-lg px-3 min-h-[220px] min-w-[450px] activity">
+      {/* <div className="card flex flex-col justify-center items-center gap-4 text-5xl border-2 rounded shadow-lg px-3 min-h-[220px] min-w-[450px] activity">
       <FaLaptopCode />
         <p>والعديد من المجالات الاخرى .......</p>
-      </div>
+      </div> */}
       {/* ******************** */}
     </div>
   );

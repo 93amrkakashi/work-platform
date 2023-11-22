@@ -12,24 +12,23 @@ export default function Home() {
   return (
     <main dir="ltr" className={``}>
       <div className="flex flex-col items-center justify-around">
-        {/* ********************* */}
         <div
-          className={`hero flex-col md:flex-row justify-center items-center pt-3 min-h-[95vh] ${
+          className={`hero flex flex-col md:flex-row  justify-evenly items-center  pb-6 min-h-[95vh]  w-full ${
             theme === "dark" ? "bg-slate-900" : "bg-indigo-700"
-          } w-full`}
+          }`}
         >
-          <div className="flex flex-col justify-center gap-5 items-start  pb-12">
-            <h1 className="font-bold text-6xl text-gray-50 ps-10">
+          <div className="flex flex-col justify-center gap-5 items-start px-3 pb-12">
+            <h1 className="font-bold text-6xl text-gray-50">
               Scripto Code
             </h1>
-            <h1 className="font-bold text-3xl text-gray-50 ps-10">
+            <h1 className="font-bold text-3xl text-gray-50">
               A Software Company
             </h1>
-            <p className="font-bold text-2xl text-gray-100 ps-10 ">
+            <p className="font-bold text-2xl text-gray-100 ">
               Your Programming Solutions Partner
             </p>
           </div>
-          <div className="md:ml-[100px] ">
+          <div className="">
             <Image
               className="animate__animated animate__floating"
               src={heroPic}
