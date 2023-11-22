@@ -14,7 +14,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-around">
         {/* ********************* */}
         <div
-          className={`hero flex justify-center items-center pt-3 min-h-[95vh] ${
+          className={`hero flex-col md:flex-row justify-center items-center pt-3 min-h-[95vh] ${
             theme === "dark" ? "bg-slate-900" : "bg-indigo-700"
           } w-full`}
         >
@@ -45,9 +45,9 @@ export default function Home() {
           className={` flex justify-center items-center min-h-[40vh]  w-full`}
         >
           <div className="flex flex-col justify-center items-center  pb-6">
-            <h1 className="text-slate-900 font-bold text-5xl pb-6 ps-10">
+            <h1 className="text-slate-900 font-bold text-3xl md:text-5xl pb-6 ps-10">
               عن{" "}
-              <span className="co-name font-bold text-5xl">Scripto Code</span>
+              <span className="co-name font-bold text-3xl md:text-5xl">Scripto Code</span>
             </h1>
             <p className="font-bold text-2xl text-gray-600 p-0 px-10 m-0 text-center">
               نحن شركة برمجيات مصرية متخصصة في تقديم حلول تكنولوجيا المعلومات.
