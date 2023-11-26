@@ -12,7 +12,6 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(initialTheme);
 
   const toggleTheme = () => {
-    // استخدام callback function مع setTheme لتحديث القيمة بشكل صحيح
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 

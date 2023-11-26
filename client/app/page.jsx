@@ -1,21 +1,19 @@
-"use client";
+// "use client";
 
 import Link from "next/link";
-import { useTheme } from "./context/ThemeContext";
+// import { useTheme } from "./context/ThemeContext";
 import heroPic from "../_data/Programmer Illustration.svg";
 import Image from "next/image";
 import Fields from "./Fields";
 
 export default function Home() {
-  const { theme, toggleTheme } = useTheme();
+  // const { theme } = useTheme();
 
   return (
     <main dir="ltr" className={``}>
       <div className="flex flex-col items-center justify-around">
         <div
-          className={`hero flex flex-col md:flex-row  justify-evenly items-center  pb-6 min-h-[95vh]  w-full ${
-            theme === "dark" ? "bg-slate-900" : "bg-indigo-700"
-          }`}
+          className={`hero flex flex-col md:flex-row  justify-evenly items-center  pb-6 min-h-[95vh]  w-full bg-indigo-700`}
         >
           <div className="flex flex-col justify-center gap-5 items-center md:items-start px-3 pb-12">
             <h1 className="font-bold text-3xl md:text-6xl text-gray-50">

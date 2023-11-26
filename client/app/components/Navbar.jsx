@@ -4,11 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "./logo-dark1.png";
-import { useTheme } from "../context/ThemeContext";
+// import { useTheme } from "../context/ThemeContext";
 
 function Navbar() {
   const [showLinks, setShowLinks] = useState(true);
-  const { theme, toggleTheme } = useTheme();
+  // const { theme, toggleTheme } = useTheme();
 
   const handleToggleMenu = () => {
     setShowLinks(!showLinks);
@@ -18,9 +18,7 @@ function Navbar() {
   };
   return (
     <nav
-      className={` ${
-        theme === "dark" ? "dark-nav" : "light-nav"
-      } fixed top-0 w-full `}
+      className={` bg-indigo-700 fixed top-0 w-full `}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-1 fixed-top">
         <Link href="/">
@@ -33,7 +31,7 @@ function Navbar() {
           />
         </Link>
         
-          <label  className="buttons__burger md:hidden" for="burger">
+          <label  className="buttons__burger md:hidden" >
             <input onClick={handleToggleMenu} type="checkbox" id="burger" />
             <span></span>
             <span></span>
@@ -46,7 +44,7 @@ function Navbar() {
           }`}
         >
           <ul
-            className={`links flex flex-col items-center justify-evenly h-full font-medium mt-4 rounded-lg md:space-x-8 md:items-center md:h-[54px] md:flex-row md:mt-0 md:border-0 `}
+            className={`text-gray-50 text-xl font-bold links flex flex-col items-center justify-evenly h-full  mt-4 rounded-lg md:space-x-8 md:items-center md:h-[54px] md:flex-row md:mt-0 md:border-0 `}
           >
             <li>
               <Link onClick={handleLinkClick} href="/">عـن الشركـة</Link>
@@ -55,14 +53,14 @@ function Navbar() {
               <Link onClick={handleLinkClick} href="/Services">الخدمات</Link>
             </li>
             
-            <li>
+            {/* <li>
               <div className="cl-toggle-switch">
                 <label className="cl-switch">
                   <input onClick={toggleTheme} type="checkbox" />
                   <span></span>
                 </label>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
