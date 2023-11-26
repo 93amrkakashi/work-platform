@@ -1,16 +1,14 @@
 "use client";
 
 import React from "react";
-import { useTheme } from "../context/ThemeContext";
 import Image from "next/image";
 
 import heroPic from "../../_data/Programmer Illustration.svg";
 import 'animate.css';
 const About = () => {
-  const { theme } = useTheme();
 
   return (
-    <main className={` ${theme === "dark" ? "dark-body" : "light-body"} `}>
+    <main className={`  `}>
       <div className="flex flex-col items-center justify-around">
         <div dir="ltr" className={`hero flex justify-center items-center pt-12 min-h-[95vh] ${theme === "dark" ?  "bg-slate-900": "bg-indigo-700"} w-full`} >
           <div className="flex flex-col justify-center gap-5 items-center">
