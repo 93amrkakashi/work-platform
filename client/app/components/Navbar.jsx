@@ -17,7 +17,7 @@ function Navbar() {
     setShowLinks(true);
   };
   return (
-    <nav
+    <div
       className={` bg-indigo-700 fixed top-0 w-full `}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-1 fixed-top">
@@ -64,7 +64,7 @@ function Navbar() {
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
   );
 }
 
