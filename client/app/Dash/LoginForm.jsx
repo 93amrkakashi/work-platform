@@ -24,7 +24,7 @@ const LoginForm = ({setuser}) => {
       body: JSON.stringify(data),
     };
 
-    fetch("https://work-platform-server.vercel.app/api/user/login", options)
+    fetch(`${url}/user/login`, options)
       .then((response) => response.json())
       .then((data) => {
         console.log("Login successful", data);

@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import SideNav from "./SideNav";
 import LoginForm from "./LoginForm";
 
+export const url ="https://work-platform-server.vercel.app/api"
+
 const Dashboard = () => {
   const [user, setuser] = useState(null)
   useEffect(() => {

@@ -22,7 +22,7 @@ const getproject = async (req, res) => {
 
 // create a project
 const createproject = async (req, res) => {
-  const { name, description, image } =
+  const { name, description, image,category } =
     req.body;
   // const outDate = formatISO(Date.now(), { representation: 'complete' });
   try {
@@ -30,6 +30,7 @@ const createproject = async (req, res) => {
       name,
       description,
       image,
+      category,
     });
     res.status(200).json(project);
   } catch (error) {

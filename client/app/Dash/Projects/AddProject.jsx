@@ -1,23 +1,55 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
+import { url } from "../page";
 
-const AddProject = ({setShowModal}) => {
+const AddProject = ({ setShowModal }) => {
   const [name, setname] = useState("");
   const [description, setdescription] = useState("");
   const [image, setimage] = useState("");
-  const [category, setcategory] = useState(""); // حالة الفئة
+  const [category, setcategory] = useState(""); 
+  const [loading, setloading] = useState(false)
 
-  function handlesubmit(e) {
-    setShowModal(false)
+  async function handlesubmit(e) {
     e.preventDefault();
-    console.log("Submitted values:", name, description, image, category);
+    setloading(true)
+    const data = {
+      name,
+      description,
+      image,
+      category,
+    };
+
+    try {
+      const response = await fetch(
+        `${url}/projects`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (response.ok) {
+        setname("")
+        setimage("")
+        setdescription("")
+        setShowModal(false);
+        setloading(false)
+      } else {
+        console.error("Failed to add project:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   }
 
   return (
     <div>
       <form
-      dir="rtl"
+        dir="rtl"
         onSubmit={handlesubmit}
         className={`w-[420px] min-h-[450px] flex flex-col 
         justify-evenly items-center rounded-xl light-nav`}
@@ -75,13 +107,17 @@ const AddProject = ({setShowModal}) => {
 
         <div className="w-full flex justify-around items-center ">
           <button
+          disabled={loading}
             type="submit"
             className={`bg-indigo-500 border rounded-xl border-slate-50 font-bold text-xl px-9`}
           >
-            اضافة مشروع
+            {loading ? "جارى الاضافة ..":"اضافة مشروع"}
           </button>
           <button
-          onClick={() => {setShowModal(false)}}
+          disabled={loading}
+            onClick={() => {
+              setShowModal(false);
+            }}
             className={`bg-red-500 border rounded-xl border-slate-50 font-bold text-xl px-9`}
           >
             الغاء
