@@ -1,12 +1,17 @@
 "use client";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 
-const LoginForm = () => {
+const LoginForm = ({setuser}) => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const [loading, setloading] = useState(false)
+  // const router = useRouter();
+
 
   function handleLogin(event) {
     event.preventDefault();
+    setloading(true)
     const data = {
       email: email,
       password: password,
@@ -23,10 +28,10 @@ const LoginForm = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("Login successful", data);
-        localStorage.setItem("token", data.token);
-        localStorage.setItem("is_online", true);
         localStorage.setItem("name", `${data.firstName} ${data.lastName}`);
-        // localStorage.setItem('is_online', true);
+        setuser(localStorage.getItem('name'))
+        setloading(false)
+        window.location.reload()
       })
       .catch((error) => {
         console.error("Login failed", error);
@@ -67,7 +72,7 @@ const LoginForm = () => {
           type="submit"
           className={`bg-indigo-900 border rounded-xl border-slate-50 font-bold text-2xl px-12`}
         >
-          Login
+          {loading ? "Logging...":"Login"}
         </button>
       </div>
     </form>

@@ -19,7 +19,7 @@ const AddProject = ({setShowModal}) => {
       <form
       dir="rtl"
         onSubmit={handlesubmit}
-        className={`w-[420px] min-h-[500px] flex flex-col 
+        className={`w-[420px] min-h-[450px] flex flex-col 
         justify-evenly items-center rounded-xl light-nav`}
       >
         <div className="field">

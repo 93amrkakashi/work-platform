@@ -27,7 +27,7 @@ const Projects = () => {
         {user && (
           <div
             className={`modal absolute ${
-              showModal ? "top-[200px]" : "top-[-500px]"
+              showModal ? "top-[170px]" : "top-[-500px]"
             }`}
           >
             <AddProject setShowModal={setShowModal} />
