@@ -4,13 +4,14 @@ import SideNav from "../SideNav";
 import AddProject from "./AddProject";
 import { url } from "../page";
 import Project from "./Project";
+import Loading from "@/app/loading";
 
 const Projects = () => {
   const [user, setuser] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [projects, setprojects] = useState(null);
   const [filterd, setfilterd] = useState(null)
-  const [active, setactive] = useState(false)
+  const [active, setactive] = useState(null)
   const [loading, setloading] = useState(false)
 
   const fetchProjects = async () => {
@@ -41,10 +42,9 @@ const Projects = () => {
     setactive(category)
   };
   useEffect(() => {
-    // const storedUser = localStorage.getItem("user");
     fetchProjects();
-    
   }, []);
+
   useEffect(() => {
     setuser(localStorage.getItem('name')) ;
     console.log(user)
@@ -56,8 +56,7 @@ const Projects = () => {
 
   return (
     <main dir="ltr" className={``}>
-      {user && <SideNav />}
-      <div className="mt-16 w-full flex flex-col justify-start items-center min-h-[95vh]">
+      <div className="mt-2 w-full flex flex-col justify-start items-center min-h-[95vh]">
         {user && <button
           className="bg-indigo-500 border rounded-xl text-slate-50 font-bold text-xl px-9"
           onClick={handleShowModal}
@@ -71,7 +70,7 @@ const Projects = () => {
             <div onClick={() => {changeCategory("موبايل")}} className={`cursor-pointer ${active =="موبايل" ?"text-indigo-700":"text-slate-800"} font-bold`}>موبايل</div>
             <div onClick={() => {changeCategory("ديسك توب")}} className={`cursor-pointer ${active =="ديسك توب" ?"text-indigo-700":"text-slate-800"} font-bold`}>ديسك توب</div>
           </div>
-          {loading ?"جارى جلب المشروعات..." :<div className="w-full flex justify-evenly items-center flex-wrap gap-6 ">
+          {loading ? <Loading text={"جارى جلب المشروعات"}/> :<div className="w-full flex justify-evenly items-center flex-wrap gap-6 ">
             {filterd?.map((project) => (
               <div key={project._id}>
                 <Project project={project} />

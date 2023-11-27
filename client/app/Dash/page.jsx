@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import SideNav from "./SideNav";
 import LoginForm from "./LoginForm";
+import Projects from "./Projects/page";
 
 export const url ="https://work-platform-server.vercel.app/api"
 
@@ -12,9 +13,9 @@ const Dashboard = () => {
   }, [user]);
   return (
     <main dir="ltr" className={``}>
-      {user && <SideNav />}
+      {/* {user && <SideNav />} */}
       <div className="w-full flex justify-center items-center min-h-[95vh]">
-        {user ? "loged in" :<LoginForm setuser={setuser}  />}
+        {user ? <Projects /> :<LoginForm setuser={setuser}  />}
       </div>
     </main>
   );

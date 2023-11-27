@@ -190,7 +190,7 @@ button:hover {
  .newtons-cradle {
   --uib-size: 200px;
   --uib-speed: 1.2s;
-  --uib-color: #474554;
+  --uib-color: #4338ca;
   position: relative;
   display: flex;
   align-items: center;
@@ -349,5 +349,42 @@ button:hover {
   overflow: hidden;
 }
 .img img{
+  width: 100%;
+}
+.list{
+  transition: all 0.6 ease-in-out;
+}
+
+.list::before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 12.5px solid #ffffff;
+  position: absolute;
+  top: -20px;
+    right: 0px;
+
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px; 
+  background-color: #ffffff; 
+  transition: width 0.5s ease; 
+}
+.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px; 
+  background-color: #ffffff; 
+  transition: width 0.5s ease; 
+}
+
+.nav-link:hover::after {
   width: 100%;
 }

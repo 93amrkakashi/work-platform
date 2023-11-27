@@ -3,16 +3,16 @@
 import React, { useState } from "react";
 import { url } from "../page";
 
-const AddProject = ({ setShowModal,projects, setprojects }) => {
+const AddProject = ({ setShowModal, projects, setprojects }) => {
   const [name, setname] = useState("");
   const [description, setdescription] = useState("");
   const [image, setimage] = useState("");
-  const [category, setcategory] = useState(""); 
-  const [loading, setloading] = useState(false)
+  const [category, setcategory] = useState("");
+  const [loading, setloading] = useState(false);
 
   async function handlesubmit(e) {
     e.preventDefault();
-    setloading(true)
+    setloading(true);
     const data = {
       name,
       description,
@@ -21,25 +21,16 @@ const AddProject = ({ setShowModal,projects, setprojects }) => {
     };
 
     try {
-      const response = await fetch(
-        `${url}/projects`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
-
+      const response = await fetch(`${url}/projects`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
       if (response.ok) {
-        setname("")
-        setimage("")
-        setdescription("")
-        // setprojects([...projects, data])
-        // setShowModal(false);
-        setloading(false)
-        window.location.reload()
+        setloading(false);
+        window.location.reload();
       } else {
         console.error("Failed to add project:", response.statusText);
       }
@@ -52,7 +43,6 @@ const AddProject = ({ setShowModal,projects, setprojects }) => {
     <div>
       <form
         dir="rtl"
-        
         className={`w-[420px] min-h-[450px] flex flex-col 
         justify-evenly items-center rounded-xl light-nav`}
       >
@@ -109,19 +99,19 @@ const AddProject = ({ setShowModal,projects, setprojects }) => {
 
         <div className="w-full flex justify-around items-center ">
           <button
-          onClick={handlesubmit}
-          disabled={loading}
+            onClick={handlesubmit}
+            disabled={loading}
             type="submit"
             className={`bg-indigo-500 border rounded-xl border-slate-50 font-bold text-xl px-9`}
           >
-            {loading ? "جارى الاضافة ..":"اضافة"}
+            {loading ? "جارى الاضافة .." : "اضافة"}
           </button>
           <button
-          disabled={loading}
-          onClick={(e) => {
-            e.preventDefault();
-            setShowModal(false);
-          }}
+            disabled={loading}
+            onClick={(e) => {
+              e.preventDefault();
+              setShowModal(false);
+            }}
             className={`bg-red-500 border rounded-xl border-slate-50 font-bold text-xl px-9`}
           >
             الغاء

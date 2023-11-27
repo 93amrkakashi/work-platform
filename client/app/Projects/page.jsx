@@ -1,19 +1,16 @@
 "use client";
 
 import React from 'react';
+import Projects from '../Dash/Projects/page';
 // import { useTheme } from '../context/ThemeContext';
 
 const Team = () => {
   // const { theme, toggleTheme } = useTheme();
 
   return (
-    <main className={` light-body `}>
-      <div className="p-4 text-center">
-        <h1 className="text-3xl font-bold mb-4">
-          مرحبًا بك في <span className="co-name">Scripto Code</span>
-        </h1>
-        
-        
+    <main className="">
+      <div className="w-full flex justify-center items-center min-h-[95vh]">
+        <Projects /> 
       </div>
     </main>
   );
