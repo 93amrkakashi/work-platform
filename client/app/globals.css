@@ -340,3 +340,7 @@ button:hover {
   border: 1px solid black;
   transform: translateY(-10px);
 }
+
+.modal{
+  transition: all 0.7s ease;
+}
