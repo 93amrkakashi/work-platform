@@ -42,7 +42,7 @@ const LoginForm = ({setuser}) => {
   return (
     <form
       onSubmit={handleLogin}
-      className={`w-[420px] min-h-[400px] flex flex-col 
+      className={`w-[350px] md:w-[450px] min-h-[350px] flex flex-col 
         justify-evenly items-center rounded-xl light-nav`}
     >
       <div className="field">

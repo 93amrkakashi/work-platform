@@ -18,7 +18,7 @@ function Navbar() {
   };
   const handleLinkClick = (link) => {
     setShowLinks(true);
-    setactive(link)
+    // setactive(link)
   };
 
   const handleUserClick = () => {
@@ -65,24 +65,24 @@ function Navbar() {
             className={`text-gray-50 text-xl font-bold links flex flex-col items-center justify-evenly h-full  mt-4 rounded-lg md:space-x-8 md:items-center md:h-[54px] md:flex-row md:mt-0 md:border-0 `}
           >
             <li>
-              <Link onClick ={(link) =>{handleLinkClick(null)}} href="/" className={`nav-link ${active == null && "active"}`}>
+              <Link onClick ={handleLinkClick} href="/" className={`nav-link`}>
                 عن الشركة
               </Link>
             </li>
             <li>
               <Link
-                onClick ={(link) =>{handleLinkClick("services")}}
+                onClick ={handleLinkClick}
                 href="/Services"
-                className={`nav-link ${active == "Services" && "active"}`}
+                className={`nav-link`}
               >
                 الخدمات
               </Link>
             </li>
             <li>
               <Link
-                onClick ={(link) =>{handleLinkClick("projects")}}
+                onClick ={handleLinkClick}
                 href="/Projects"
-                className={`nav-link ${active == "Projects" && "active"}`}
+                className={`nav-link`}
               >
                 أعمالنا
               </Link>

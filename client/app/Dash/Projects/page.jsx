@@ -63,8 +63,8 @@ const Projects = () => {
         >
           إضافة مشروع
         </button>}
-        <div className="flex flex-col justify-center items-center w-full p-10 mt-3">
-          <div dir="ltr" className="w-full flex flex-row-reverse justify-around items-center border-4 rounded-xl text-xl py-2 px-9 mb-9">
+        <div className="flex flex-col justify-center items-center w-full p-3 mt-3">
+          <div dir="ltr" className="w-full flex flex-row-reverse justify-around items-center border-4 rounded-xl text-xl py-2 px-3 mb-9">
             <div onClick={() => {changeCategory("الكل")}} className={`cursor-pointer ${active ==null ?"text-indigo-700":"text-slate-800"} font-bold`}>الكل</div>
             <div onClick={() => {changeCategory("ويب")}} className={`cursor-pointer ${active =="ويب" ?"text-indigo-700":"text-slate-800"} font-bold`}>ويب</div>
             <div onClick={() => {changeCategory("موبايل")}} className={`cursor-pointer ${active =="موبايل" ?"text-indigo-700":"text-slate-800"} font-bold`}>موبايل</div>
