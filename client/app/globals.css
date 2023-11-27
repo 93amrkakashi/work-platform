@@ -344,3 +344,10 @@ button:hover {
 .modal{
   transition: all 0.7s ease;
 }
+
+.img{
+  overflow: hidden;
+}
+.img img{
+  width: 100%;
+}

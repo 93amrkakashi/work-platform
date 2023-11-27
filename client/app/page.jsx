@@ -28,7 +28,7 @@ export default function Home() {
           </div>
           <div className="">
             <Image
-              className="animate__animated animate__floating"
+              
               src={heroPic}
               alt="logo"
               width={610}

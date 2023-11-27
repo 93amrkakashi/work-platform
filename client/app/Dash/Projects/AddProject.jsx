@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { url } from "../page";
 
-const AddProject = ({ setShowModal }) => {
+const AddProject = ({ setShowModal,projects, setprojects }) => {
   const [name, setname] = useState("");
   const [description, setdescription] = useState("");
   const [image, setimage] = useState("");
@@ -36,8 +36,10 @@ const AddProject = ({ setShowModal }) => {
         setname("")
         setimage("")
         setdescription("")
-        setShowModal(false);
+        // setprojects([...projects, data])
+        // setShowModal(false);
         setloading(false)
+        window.location.reload()
       } else {
         console.error("Failed to add project:", response.statusText);
       }
@@ -50,7 +52,7 @@ const AddProject = ({ setShowModal }) => {
     <div>
       <form
         dir="rtl"
-        onSubmit={handlesubmit}
+        
         className={`w-[420px] min-h-[450px] flex flex-col 
         justify-evenly items-center rounded-xl light-nav`}
       >
@@ -99,25 +101,27 @@ const AddProject = ({ setShowModal }) => {
             <option value="" disabled selected>
               اختر الفئة
             </option>
-            <option value="web">ويب</option>
-            <option value="mobile">موبايل</option>
-            <option value="desktop">ديسك توب</option>
+            <option value="ويب">ويب</option>
+            <option value="موبايل">موبايل</option>
+            <option value="ديسك توب">ديسك توب</option>
           </select>
         </div>
 
         <div className="w-full flex justify-around items-center ">
           <button
+          onClick={handlesubmit}
           disabled={loading}
             type="submit"
             className={`bg-indigo-500 border rounded-xl border-slate-50 font-bold text-xl px-9`}
           >
-            {loading ? "جارى الاضافة ..":"اضافة مشروع"}
+            {loading ? "جارى الاضافة ..":"اضافة"}
           </button>
           <button
           disabled={loading}
-            onClick={() => {
-              setShowModal(false);
-            }}
+          onClick={(e) => {
+            e.preventDefault();
+            setShowModal(false);
+          }}
             className={`bg-red-500 border rounded-xl border-slate-50 font-bold text-xl px-9`}
           >
             الغاء
