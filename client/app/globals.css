@@ -388,3 +388,9 @@ button:hover {
 .nav-link:hover::after {
   width: 100%;
 }
+
+
+.img-con:hover  img{
+  transform: scale(1.2) rotate(5deg); 
+  transition: transform 0.5s ease; 
+}
